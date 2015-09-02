@@ -39,6 +39,8 @@ I appreciate all donations, no matter the size. Further development of this plug
 * month - Show only specific Month. Type 'current' for displaying current month only [ecs-list-events cat='festival' month='2015-06']
 * past - Show Outdated Events. [ecs-list-events cat='festival' past='yes']
 * key - Order with Start Date [ecs-list-events cat='festival' key='start date']
+* cta - Add a call to action link to the event
+* You can use 2 other attributes ctatitle and ctacss.  ctatitle overrides the link title, if ctatitle is missing or empty the event title will be used.  ctacss adds additional css to the link.
 
 If you like this plugin please rate it on WordPress.org
 
@@ -70,6 +72,8 @@ If you like this plugin please rate it on WordPress.org
 * month - Show only specific Month. Type 'current' for displaying current month only. [ecs-list-events cat='festival' month='2015-06']
 * past - Show Outdated Events. [ecs-list-events cat='festival' past='yes']
 * key - Order with Start Date [ecs-list-events cat='festival' key='start date']
+* cta - Add a call to action link to the event
+* You can use 2 other attributes ctatitle and ctacss.  ctatitle overrides the link title, if ctatitle is missing or empty the event title will be used.  ctacss adds additional css to the link.
 
 = How do I use this shortcode in a widget? =
 
@@ -90,6 +94,8 @@ The plugin does not include styling. Events are listed in ul li tags with approp
 include echo do_shortcode("[ecs-list-events]"); in the template where you want the events list to display.
 
 == Upgrade Notice ==
+= 1.0.12 =
+Add Call to Action attribute
 = 1.0.11 =
 Add Link to Thumbnail
 merge pull request from d4mation -Replaced extracted variables with $atts as using extract was deprecated

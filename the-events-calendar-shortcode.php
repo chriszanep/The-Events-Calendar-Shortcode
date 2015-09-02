@@ -84,7 +84,10 @@ class Events_Calendar_Shortcode
 			'thumb' => 'false',
 			'thumbwidth' => '',
 			'thumbheight' => '',
-			'contentorder' => 'title, thumbnail, excerpt, date, venue',
+			'cta' => 'false',
+			'ctatitle' => '',
+			'ctacss' => '',
+			'contentorder' => 'title, thumbnail, excerpt, date, venue, cta',
 			'event_tax' => '',
 		), $atts, 'ecs-list-events' );
 
@@ -225,6 +228,13 @@ class Events_Calendar_Shortcode
 						case 'venue' :
 							if( self::isValid($atts['venue']) ) {
 								$output .= '<span class="duration venue"><em> at </em>' . apply_filters( 'ecs_event_list_venue', tribe_get_venue(), $atts ) . '</span>';
+							}
+							break;
+
+						case 'cta' :
+							if( self::isValid($atts['cta']) ) {
+								$ctaTitle = empty($atts['ctatitle']) ? apply_filters( 'ecs_event_list_title', get_the_title(), $atts ) : $atts['ctatitle'];
+								$output .= '<p class="entry-cta"><a class="' . $atts['ctacss'] . '" href="' . tribe_get_event_link() . '" rel="bookmark">' . $ctaTitle . '</a></p>';
 							}
 							break;
 					}

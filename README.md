@@ -72,9 +72,9 @@ The shortcode displays lists of your events. You can control the event display w
   [ecs-list-events cat='festival' limit='3' order='DESC' viewall='false']
   ```
 
-12. contentorder - Manage the order of content with commas. Default to `title, thumbnail, excerpt, date, venue`.
+12. contentorder - Manage the order of content with commas. Default to `title, thumbnail, excerpt, date, venue, cta`.
   ```  
-  [ecs-list-events cat='festival' limit='3' order='DESC' viewall='false' contentorder='title, thumbnail, excerpt, date, venue']
+  [ecs-list-events cat='festival' limit='3' order='DESC' viewall='false' contentorder='title, thumbnail, excerpt, date, venue, cta']
   ```
 
 13. month identifier - Show only specific Month. Type 'current' for displaying current month only.
@@ -91,6 +91,15 @@ The shortcode displays lists of your events. You can control the event display w
   ```  
   [ecs-list-events cat='festival' key='start date']
   ```
+
+16. cta - Show Call to Action link
+  ```  
+  [ecs-list-events cta='true']
+  ```  
+  You can use 2 other attributes ctatitle and ctacss.  ctatitle overrides the link title, if ctatitle is missing or empty the event title will be used.  ctacss adds additional css to the link.
+   ```  
+  [ecs-list-events cta='true' ctatitle='more' ctacss='mycss']
+  ```   
 
 ## Questions about this project?
 
